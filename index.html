@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="1.css">
+    <script src="로그인 확인.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">4.11</div>
+        <nav class="nav">
+            <a href="#">대한민국 임시정부</a>
+            <a href="#">광복군</a>
+            <a href="#">독립운동가 후손들 후원</a>
+            <a href="#">독립운동가 후손들이 처한 현실</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>로그인</h2>
+        <form id="loginForm" action="login" method="post">
+            <div class="form-group">
+                <label for="username">아이디</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">로그인 상태 유지</label>
+            </div>
+            <div class="links">
+                <a href="register.html">회원가입</a> |
+                <a href="forgot-password.html">비밀번호 찾기</a>
+                
+            </div>
+            <div class="hero">
+                <img src="images/우국충정.jpg" alt="젊은 투사의 희생">
+                <div class="box2">매년 4월 11일은 임시정부 수립일</div>
+                <h1>1919년 대한민국 3.1운동을 계기로 상하이에는 대한민국 임시정부가 수립되었습니다.</h1>
+                <h2>그들은 조국이 해방되는 날까지 목숨걸고 독립을 운동을 하였으나 조국은 그들을 대우하지 않았고.</h2>
+                <h3>그 후손들은 하루하루 힘들게 살아가고 있습니다. 목숨걸고 일제에 항거한이들의 후손을 여러분이</h3>
+                <h4>도와주십시오</h4>
+                <button type="submit" class="advanced-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    로그인
+                  </button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+
+<!-- JavaScript 추가 -->
+<script>   
+   // users.json 파일 생성
+// [
+//   {"id": 1, "username": "user1", "email": "user1@example.com"},
+//   {"id": 2, "username": "user2", "email": "user2@example.com"}
+// ]
+
+// 자바스크립트에서 불러오기
+fetch('users.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // 여기서 데이터 처리
+  });
+</script>
+</body>
+</html>
